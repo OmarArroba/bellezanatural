@@ -1,0 +1,364 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belleza Natural - Peluquería & Nails</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <meta name="description" content="Salón de belleza Belleza Natural. Expertas en cabello, uñas, cejas y pestañas.">
+</head>
+<body>
+
+  <!-- Header & Nav -->
+  <header id="main-header">
+    <div class="container header-content">
+      <a href="#" class="logo-link">
+        <img src="./assets/img/logo.png" alt="Logo Belleza Natural">
+        <span class="font-display logo-text">Suéltate<br>el Pelo</span>
+      </a>
+
+      <nav class="nav-desktop">
+        <a href="#transformaciones" class="nav-link font-body">Transformaciones</a>
+        <a href="#servicios" class="nav-link font-body">Servicios</a>
+        <a href="#promos" class="nav-link font-body">Promos</a>
+        <a href="#contacto" class="nav-link font-body">Contacto</a>
+      </nav>
+
+      <button id="menu-toggle-btn" class="menu-toggle" aria-label="Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <nav id="mobile-menu" class="mobile-menu">
+      <a href="#transformaciones" class="nav-link font-body">Transformaciones</a>
+      <a href="#servicios" class="nav-link font-body">Servicios</a>
+      <a href="#promos" class="nav-link font-body">Promos</a>
+      <a href="#contacto" class="nav-link font-body">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero">
+      <div class="hero-slider" id="hero-slider">
+        <div class="hero-slide active">
+          <img src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?w=1600&h=900&fit=crop&auto=format" alt="Salón de belleza Belleza Natural">
+        </div>
+        <div class="hero-slide">
+          <img src="https://images.unsplash.com/photo-1675034743339-0b0747047727?w=1600&h=900&fit=crop&auto=format" alt="Estilista trabajando en el cabello">
+        </div>
+        <div class="hero-slide">
+          <img src="https://images.unsplash.com/photo-1560869713-bf165a9cfac1?w=1600&h=900&fit=crop&auto=format" alt="Resultado de coloración rubia">
+        </div>
+      </div>
+      
+      <div class="hero-overlay"></div>
+      <div class="hero-top-edge"></div>
+
+      <div class="hero-content">
+        <div class="hero-content-inner">
+          <p class="font-body hero-subtitle">Expertas en belleza</p>
+          <h1 class="font-display hero-title">
+            Donde tu cabello<br>
+            <em>cobra vida</em>
+          </h1>
+          <p class="font-body hero-desc">CABELLO · PESTAÑAS · UÑAS · CEJAS — Peluquería & Nails</p>
+          <div class="hero-buttons">
+            <button class="btn-gold open-modal-btn">Agendar cita</button>
+            <a href="#servicios" class="btn-outline-gold">Ver servicios</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-dots" id="hero-dots">
+        <button class="hero-dot active" aria-label="Slide 1" data-index="0"></button>
+        <button class="hero-dot" aria-label="Slide 2" data-index="1"></button>
+        <button class="hero-dot" aria-label="Slide 3" data-index="2"></button>
+      </div>
+    </section>
+
+    <!-- Transformaciones Section -->
+    <section id="transformaciones">
+      <div class="container">
+        <div class="section-header">
+          <p class="font-body section-subtitle">Resultados reales</p>
+          <h2 class="font-display section-title">Transformaciones</h2>
+          <div class="gold-rule"></div>
+        </div>
+
+        <div class="grid-transformaciones">
+          <!-- Interactive slider -->
+          <div class="comparison-slider-wrapper">
+            <div class="comparison-slider" id="comparison-slider">
+              <img src="./assets/img/despues.png" alt="Resultado" class="comparison-after" draggable="false">
+              
+              <div class="comparison-before" id="comparison-before">
+                <img src="./assets/img/antes.png" alt="Antes" draggable="false">
+              </div>
+
+              <div class="comparison-handle" id="comparison-handle">
+                <div class="comparison-handle-btn">◀▶</div>
+              </div>
+
+              <span class="before-after-label left">ANTES</span>
+              <span class="before-after-label right">DESPUÉS</span>
+            </div>
+            <p class="font-body slider-hint">← Desliza para comparar →</p>
+          </div>
+
+          <!-- Text content -->
+          <article class="transformaciones-text">
+            <p class="font-body section-subtitle" style="margin-bottom: 0.75rem;">Servicio destacado</p>
+            <h3 class="font-display">Cirugía Capilar<br><em>+ Brillo de Oro</em></h3>
+            <p class="font-body transformaciones-desc">
+              Recuperamos la vida y luminosidad de tu cabello con nuestra técnica exclusiva de Cirugía Capilar combinada con un tratamiento de Brillo de Oro. Resultados inmediatos, suavidad extrema y un brillo que habla por sí solo.
+            </p>
+            <div class="transformaciones-divider"></div>
+            <p class="font-body transformaciones-quote">
+              "Mi cabello nunca había lucido así. ¡El cambio fue increíble!"<br>
+              <span style="color: var(--gold);">— Nombre clienta</span>
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Servicios Section -->
+    <section id="servicios">
+      <div class="container">
+        <div class="section-header">
+          <p class="font-body section-subtitle">Lo que ofrecemos</p>
+          <h2 class="font-display section-title">Nuestros Servicios</h2>
+          <div class="gold-rule"></div>
+        </div>
+
+        <div class="grid-3" id="servicios-grid">
+          <!-- Cabello -->
+          <article class="card-service">
+            <div class="card-img">
+              <img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?w=600&h=400&fit=crop&auto=format" alt="Servicio de tratamiento capilar">
+              <div class="card-img-overlay"></div>
+            </div>
+            <div class="card-body">
+              <h3 class="font-display card-title">Cabello</h3>
+              <div class="card-divider"></div>
+              <ul class="card-list font-body">
+                <li><span class="card-list-left"><span class="card-list-icon">✦</span>Botox Hialurónico</span><span class="card-list-price">$$</span></li>
+                <li><span class="card-list-left"><span class="card-list-icon">✦</span>Cirugía Capilar</span><span class="card-list-price">$$</span></li>
+                <li><span class="card-list-left"><span class="card-list-icon">✦</span>Alisado Asiático</span><span class="card-list-price">$$</span></li>
+                <li><span class="card-list-left"><span class="card-list-icon">✦</span>Piña Plex</span><span class="card-list-price">$$</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Uñas -->
+          <article class="card-service">
+            <div class="card-img">
+              <img src="https://images.unsplash.com/photo-1777287216954-2b4b22bb6bf2?w=600&h=400&fit=crop&auto=format" alt="Uñas stiletto metálicas y con joyería">
+              <div class="card-img-overlay"></div>
+            </div>
+            <div class="card-body">
+              <h3 class="font-display card-title">Uñas</h3>
+              <div class="card-divider"></div>
+              <ul class="card-list font-body">
+                <li><span class="card-list-left"><span class="card-list-icon">◆</span>Acrílicas Almond</span><span class="card-list-price">$$</span></li>
+                <li><span class="card-list-left"><span class="card-list-icon">◆</span>Base Rubber</span><span class="card-list-price">$$</span></li>
+                <li><span class="card-list-left"><span class="card-list-icon">◆</span>Press On</span><span class="card-list-price">$$</span></li>
+                <li><span class="card-list-left"><span class="card-list-icon">◆</span>Manos y Pies Shellac</span><span class="card-list-price">$$</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Cejas & Pestañas -->
+          <article class="card-service">
+            <div class="card-img">
+              <img src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?w=600&h=400&fit=crop&auto=format" alt="Tratamiento de cejas y pestañas en salón moderno">
+              <div class="card-img-overlay"></div>
+            </div>
+            <div class="card-body">
+              <h3 class="font-display card-title">Cejas & Pestañas</h3>
+              <div class="card-divider"></div>
+              <ul class="card-list font-body">
+                <li><span class="card-list-left"><span class="card-list-icon">✧</span>Clásicas Tupidas</span><span class="card-list-price">$$</span></li>
+                <li><span class="card-list-left"><span class="card-list-icon">✧</span>Brow Laminado + Dep</span><span class="card-list-price">$$</span></li>
+                <li><span class="card-list-left"><span class="card-list-icon">✧</span>Volumen Egipcio</span><span class="card-list-price">$$</span></li>
+                <li><span class="card-list-left"><span class="card-list-icon">✧</span>Limpieza Facial</span><span class="card-list-price">$$</span></li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Promos Section -->
+    <section id="promos">
+      <div class="container">
+        <div class="grid-2">
+          <!-- Text -->
+          <article>
+            <p class="font-body section-subtitle" style="margin-bottom: 0.75rem;">Temporada especial</p>
+            <h2 class="font-display promos-title">Promociones especiales<br><em>diseñados para ti</em></h2>
+            <div class="promos-divider"></div>
+            <p class="font-body promos-desc">
+              Este mes tenemos combos exclusivos para que te mimes de pies a cabeza. Aprovecha nuestras promociones y vive la experiencia completa de belleza en un solo lugar.
+            </p>
+
+            <div class="promo-cards">
+              <div class="promo-card">
+                <div>
+                  <p class="font-display promo-card-title">Promocione Estrella</p>
+                  <p class="font-body promo-card-desc">Cirugía Capilar + Manos Shellac</p>
+                </div>
+                <span class="font-body promo-tag">MÁS POPULAR</span>
+              </div>
+              <div class="promo-card">
+                <div>
+                  <p class="font-display promo-card-title">Promocione Reina</p>
+                  <p class="font-body promo-card-desc">Botox + Uñas Acrílicas + Brow Laminado</p>
+                </div>
+                <span class="font-body promo-tag">NUEVO</span>
+              </div>
+              <div class="promo-card">
+                <div>
+                  <p class="font-display promo-card-title">Promocione Esencial</p>
+                  <p class="font-body promo-card-desc">Alisado + Manos y Pies</p>
+                </div>
+              </div>
+            </div>
+
+            <button class="btn-gold open-modal-btn">Solicitar promoción</button>
+          </article>
+
+          <!-- Image -->
+          <div class="promos-image-wrapper">
+            <div class="promos-image-border"></div>
+            <img src="https://images.unsplash.com/photo-1777287216958-84144739db83?w=700&h=900&fit=crop&auto=format" alt="Uñas stiletto negras — resultado impecable" class="promos-image">
+            <div class="promos-badge">
+              <p class="font-body promos-badge-title">Descuento especial</p>
+              <p class="font-display promos-badge-value">Hasta <em>20% OFF</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contacto">
+    <div class="container">
+      <div class="grid-2" style="margin-bottom: 4rem; align-items: start;">
+        <!-- Info -->
+        <div>
+          <div class="footer-logo">
+            <img src="./assets/img/logo.png" alt="Logo Belleza Natural" width="56" height="56" style="object-fit: cover; border-radius: 50%;">
+            <div>
+              <h2 class="font-display footer-title">Belleza Natural</h2>
+              <p class="font-body footer-subtitle">PELUQUERÍA & NAILS</p>
+            </div>
+          </div>
+          <p class="font-body footer-desc">
+            Tu salón de confianza para cabello, uñas, cejas y pestañas. Aquí la belleza no tiene límites.
+          </p>
+          <div style="margin-bottom: 1.5rem;">
+            <p class="font-body" style="color: var(--gold); font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; margin: 0 0 0.75rem;">Nuestras Redes</p>
+            <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+              <a href="https://www.instagram.com/sueltateelpelo_ec?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="social-link">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+                Instagram
+              </a>
+              <a href="https://www.tiktok.com/@sueltateelpelo_ec?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" class="social-link">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                </svg>
+                TikTok
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-schedule">
+            <p class="font-body footer-schedule-title">Horario de atención</p>
+            <p class="font-body footer-schedule-text">10:00 AM — 20:00 PM · Lunes a Sábado</p>
+          </div>
+
+          <a href="#" class="btn-whatsapp" id="footer-wa-link" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+              <path d="M12 0C5.374 0 0 5.373 0 12c0 2.117.549 4.107 1.509 5.841L.065 23.494l5.826-1.467A11.948 11.948 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.81c-1.83 0-3.528-.491-4.99-1.347l-.358-.21-3.456.87.92-3.367-.235-.372A9.796 9.796 0 012.19 12C2.19 6.563 6.563 2.19 12 2.19S21.81 6.563 21.81 12 17.437 21.81 12 21.81z"/>
+            </svg>
+            Agenda una cita
+          </a>
+        </div>
+
+        <!-- Media -->
+        <div class="footer-media" style="height: 100%;">
+          <div class="footer-map" style="height: 100%; border: 1px solid rgba(201,168,76,0.2); border-radius: 2px; overflow: hidden; background: var(--black-card); min-height: 280px; padding: 0;">
+            <iframe src="https://maps.google.com/maps?q=Su%C3%A9ltate%20el%20Pelo%20Ecuador&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom -->
+      <div class="footer-bottom">
+        <p class="font-body footer-copyright">© 2026 Belleza Natural. Todos los derechos reservados.</p>
+        <p class="font-body footer-copyright">Peluquería & Nails</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Booking Modal -->
+  <div id="booking-modal" class="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-top-line"></div>
+      <button class="modal-close" id="close-modal-btn" aria-label="Cerrar">✕</button>
+      
+      <div class="modal-header">
+        <img src="./assets/img/logo.png" alt="Logo" width="44" height="44" style="object-fit: cover; border-radius: 50%;">
+        <h3 class="font-display modal-title">Reserva tu espacio</h3>
+        <p class="font-body modal-subtitle">Completa los datos y te contactamos</p>
+      </div>
+
+      <div class="modal-form">
+        <div>
+          <label class="font-body modal-label" for="booking-date">Fecha <span style="text-transform:none; color:var(--white-muted); font-size:0.6rem;">(Lunes a Sábado)</span></label>
+          <input type="date" id="booking-date" class="modal-input">
+        </div>
+        <div>
+          <label class="font-body modal-label" for="booking-time">Hora <span style="text-transform:none; color:var(--white-muted); font-size:0.6rem;">(10:00 AM - 20:00 PM)</span></label>
+          <input type="time" id="booking-time" class="modal-input" min="10:00" max="20:00">
+        </div>
+        <div>
+          <label class="font-body modal-label" for="booking-service">Servicio</label>
+          <select id="booking-service" class="modal-input" style="cursor: pointer;">
+            <option value="">Seleccionar servicio…</option>
+            <option value="Botox Hialurónico">Botox Hialurónico</option>
+            <option value="Cirugía Capilar">Cirugía Capilar</option>
+            <option value="Alisado Asiático">Alisado Asiático</option>
+            <option value="Piña Plex">Piña Plex</option>
+            <option value="Acrílicas Almond">Acrílicas Almond</option>
+            <option value="Base Rubber">Base Rubber</option>
+            <option value="Press On">Press On</option>
+            <option value="Manos y Pies Shellac">Manos y Pies Shellac</option>
+            <option value="Clásicas Tupidas">Clásicas Tupidas</option>
+            <option value="Brow Laminado + Depilación">Brow Laminado + Depilación</option>
+            <option value="Volumen Egipcio">Volumen Egipcio</option>
+            <option value="Limpieza Facial">Limpieza Facial</option>
+          </select>
+        </div>
+        <a href="#" id="modal-wa-link" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-full">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12 0C5.374 0 0 5.373 0 12c0 2.117.549 4.107 1.509 5.841L.065 23.494l5.826-1.467A11.948 11.948 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.81c-1.83 0-3.528-.491-4.99-1.347l-.358-.21-3.456.87.92-3.367-.235-.372A9.796 9.796 0 012.19 12C2.19 6.563 6.563 2.19 12 2.19S21.81 6.563 21.81 12 17.437 21.81 12 21.81z"/>
+          </svg>
+          Enviar por WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>

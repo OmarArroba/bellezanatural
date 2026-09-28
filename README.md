@@ -1,6 +1,6 @@
-# Suéltate el Pelo - Interfaz Web
+# Belleza Natural - Interfaz Web
 
-Este repositorio contiene el desarrollo del entorno visual ("Front-End") para la página web del salón de belleza "Suéltate el Pelo". Su objetivo principal es ofrecer una experiencia inmersiva y moderna al usuario simulando el comportamiento de diapositivas de pantalla completa, con un formato de navegación fluida que se asemeja al de una aplicación móvil nativa.
+Este repositorio contiene el desarrollo del entorno visual ("Front-End") para la página web del salón de belleza "Belleza Natural". Su objetivo principal es ofrecer una experiencia inmersiva y moderna al usuario simulando el comportamiento de diapositivas de pantalla completa, con un formato de navegación fluida que se asemeja al de una aplicación móvil nativa.
 
 ## Estructura del Proyecto
 
