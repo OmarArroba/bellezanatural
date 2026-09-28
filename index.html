@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Belleza Natural - Peluquería & Nails</title>
   <link rel="stylesheet" href="./css/fullscreen.css" />
+  <link rel="stylesheet" href="./css/OptionWheel.css" />
   <meta name="description" content="Salón de belleza Belleza Natural. Expertas en cabello, uñas, cejas y pestañas." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,22 +15,9 @@
 <body>
 
   <!-- ========== RUEDA NAVEGACIÓN ========== -->
-  <nav class="wheel-nav" id="wheelNav" aria-label="Navegación de secciones">
-    <div class="wheel-nav__track">
-      <svg class="wheel-nav__arc wheel-nav__arc--side" viewBox="0 0 120 300" preserveAspectRatio="xMidYMid meet">
-        <path d="M -10,30 Q 110,150 -10,270" fill="none" stroke="var(--gold)" stroke-width="3" opacity="0.25"/>
-      </svg>
-      <svg class="wheel-nav__arc wheel-nav__arc--bottom" viewBox="0 0 300 120" preserveAspectRatio="xMidYMid meet">
-        <path d="M 30,130 Q 150,10 270,130" fill="none" stroke="var(--gold)" stroke-width="3" opacity="0.25"/>
-      </svg>
-      <div class="wheel-nav__spheres" id="wheelSpheres">
-        <button class="sphere active" data-index="0"><span class="sphere__label">Inicio</span></button>
-        <button class="sphere" data-index="1"><span class="sphere__label">Resultados</span></button>
-        <button class="sphere" data-index="2"><span class="sphere__label">Servicios</span></button>
-        <button class="sphere" data-index="3"><span class="sphere__label">Promos</span></button>
-      </div>
-    </div>
-  </nav>
+  <div id="optionWheelContainer" style="position: fixed; left: 0; top: 0; width: 240px; height: 100%; z-index: 200; pointer-events: auto;">
+    <div id="optionWheel"></div>
+  </div>
 
   <!-- ========== SCROLL CONTAINER ========== -->
   <main class="scroll-container" id="scrollContainer">
@@ -307,6 +295,7 @@
     </div>
   </div>
 
+  <script src="./js/OptionWheel.js"></script>
   <script src="./js/fullscreen.js"></script>
 </body>
 </html>

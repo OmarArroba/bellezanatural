@@ -19,8 +19,8 @@
   const container = document.getElementById('scrollContainer');
   const sections  = Array.from(container.querySelectorAll('.fs-section'));
   const arrows    = Array.from(container.querySelectorAll('.arrow-down'));
-  const wheelNav  = document.getElementById('wheelNav');
-  const spheres   = Array.from(document.querySelectorAll('.sphere'));
+  const optionWheelEl = document.getElementById('optionWheel');
+  
 
   const TOTAL     = sections.length;
   let current     = 0;
@@ -33,144 +33,19 @@
   //  RUEDA DE NAVEGACIÓN
   // ──────────────────────────────────────────────────────────
 
-  function isMobile() { return window.innerWidth <= 768; }
-
-  // Configuración de cada "slot" en el arco lateral (desktop)
-  function getSideSlot(role) {
-    switch (role) {
-      case 'far-prev': return {
-        top: '0%', left: '-22%', size: 40, fontSize: 0,
-        bg: '#2e7d32', opacity: 0.4, shadow: 'none', color: '#fff'
-      };
-      case 'prev': return {
-        top: '14%', left: '6%', size: 54, fontSize: 7.5,
-        bg: '#2e7d32', opacity: 0.8, shadow: '0 4px 18px rgba(0,0,0,0.3)', color: '#fff'
-      };
-      case 'active': return {
-        top: '37%', left: '20%', size: 88, fontSize: 10,
-        bg: '#6abf69', opacity: 1, shadow: '0 6px 35px rgba(106,191,105,0.35)', color: '#080808'
-      };
-      case 'next': return {
-        top: '63%', left: '6%', size: 54, fontSize: 7.5,
-        bg: '#b3dce6', opacity: 0.8, shadow: '0 4px 18px rgba(0,0,0,0.3)', color: '#080808'
-      };
-      case 'far-next': return {
-        top: '82%', left: '-22%', size: 40, fontSize: 0,
-        bg: '#b3dce6', opacity: 0.4, shadow: 'none', color: '#fff'
-      };
-      default: return {
-        top: '50%', left: '-70%', size: 28, fontSize: 0,
-        bg: '#444', opacity: 0, shadow: 'none', color: '#fff'
-      };
-    }
-  }
-
-  // Configuración de cada "slot" en el arco horizontal (móvil/abajo)
-  function getBottomSlot(role) {
-    switch (role) {
-      case 'far-prev': return {
-        left: '0%', bottom: '-22%', size: 34, fontSize: 0,
-        bg: '#2e7d32', opacity: 0.4, shadow: 'none', color: '#fff'
-      };
-      case 'prev': return {
-        left: '12%', bottom: '8%', size: 44, fontSize: 7,
-        bg: '#2e7d32', opacity: 0.8, shadow: '0 4px 16px rgba(0,0,0,0.3)', color: '#fff'
-      };
-      case 'active': return {
-        left: '38%', bottom: '28%', size: 72, fontSize: 9,
-        bg: '#6abf69', opacity: 1, shadow: '0 6px 30px rgba(106,191,105,0.35)', color: '#080808'
-      };
-      case 'next': return {
-        left: '65%', bottom: '8%', size: 44, fontSize: 7,
-        bg: '#b3dce6', opacity: 0.8, shadow: '0 4px 16px rgba(0,0,0,0.3)', color: '#080808'
-      };
-      case 'far-next': return {
-        left: '85%', bottom: '-22%', size: 34, fontSize: 0,
-        bg: '#b3dce6', opacity: 0.4, shadow: 'none', color: '#fff'
-      };
-      default: return {
-        left: '50%', bottom: '-60%', size: 24, fontSize: 0,
-        bg: '#444', opacity: 0, shadow: 'none', color: '#fff'
-      };
-    }
-  }
-
-  function getRoleForSphere(sphereIdx, activeIdx) {
-    const diff = sphereIdx - activeIdx;
-    if (diff === -2) return 'far-prev';
-    if (diff === -1) return 'prev';
-    if (diff ===  0) return 'active';
-    if (diff ===  1) return 'next';
-    if (diff ===  2) return 'far-next';
-    return 'hidden';
-  }
-
-  function layoutSpheres(activeIdx) {
-    const mobile = isMobile();
-
-    spheres.forEach((sphere, i) => {
-      const role = getRoleForSphere(i, activeIdx);
-
-      if (mobile) {
-        const cfg = getBottomSlot(role);
-        // Limpiar propiedades de modo lateral
-        sphere.style.top = 'auto';
-        sphere.style.left = cfg.left;
-        sphere.style.bottom = cfg.bottom;
-        sphere.style.width = cfg.size + 'px';
-        sphere.style.height = cfg.size + 'px';
-        sphere.style.background = cfg.bg;
-        sphere.style.opacity = cfg.opacity;
-        sphere.style.boxShadow = cfg.shadow;
-        sphere.style.color = cfg.color;
-
-        // Ajustar left para centrar la esfera (compensar su propio tamaño)
-        // Ya se maneja con transform en el siguiente paso
-      } else {
-        const cfg = getSideSlot(role);
-        sphere.style.bottom = 'auto';
-        sphere.style.top = cfg.top;
-        sphere.style.left = cfg.left;
-        sphere.style.width = cfg.size + 'px';
-        sphere.style.height = cfg.size + 'px';
-        sphere.style.background = cfg.bg;
-        sphere.style.opacity = cfg.opacity;
-        sphere.style.boxShadow = cfg.shadow;
-        sphere.style.color = cfg.color;
+  
+  let optionWheel;
+  if (optionWheelEl) {
+    optionWheel = new OptionWheel(optionWheelEl, {
+      items: ['Inicio', 'Resultados', 'Servicios', 'Promos'],
+      side: 'left',
+      textColor: '#a6a6a6',
+      activeColor: '#c9a84c',
+      onChange: (index) => {
+        goTo(index);
       }
-
-      const label = sphere.querySelector('.sphere__label');
-      const fs = mobile ? getBottomSlot(role).fontSize : getSideSlot(role).fontSize;
-      if (fs > 0) {
-        label.style.fontSize = fs + 'px';
-        label.style.opacity = '1';
-      } else {
-        label.style.fontSize = '0px';
-        label.style.opacity = '0';
-      }
-
-      sphere.classList.toggle('active', role === 'active');
-      sphere.classList.toggle('out-of-range', role === 'hidden');
     });
   }
-
-  function showWheel() {
-    clearTimeout(restTimer);
-    wheelNav.classList.remove('rest');
-    wheelNav.classList.add('visible');
-  }
-
-  function restWheel() {
-    clearTimeout(restTimer);
-    restTimer = setTimeout(() => {
-      wheelNav.classList.remove('visible');
-      wheelNav.classList.add('rest');
-    }, REST_DELAY);
-  }
-
-  // ──────────────────────────────────────────────────────────
-  //  NAVEGACIÓN FULLSCREEN
-  // ──────────────────────────────────────────────────────────
 
   function goTo(index) {
     if (index < 0 || index >= TOTAL || index === current || isScrolling) return;
@@ -197,19 +72,6 @@
   // 3. Arrow buttons
   arrows.forEach((btn) => {
     btn.addEventListener('click', () => goTo(current + 1));
-  });
-
-  // 4. Sphere clicks
-  spheres.forEach((sphere) => {
-    sphere.addEventListener('click', () => {
-      const targetIdx = parseInt(sphere.dataset.index, 10);
-      if (targetIdx === current) {
-        showWheel();
-        restWheel();
-      } else {
-        goTo(targetIdx);
-      }
-    });
   });
 
   // 5. Keyboard
@@ -375,13 +237,13 @@
   //  INICIALIZACIÓN
   // ──────────────────────────────────────────────────────────
 
-  layoutSpheres(0);
-  wheelNav.classList.add('rest');
+  
+  
 
   // Mostrar brevemente la rueda al cargar
-  setTimeout(() => { showWheel(); restWheel(); }, 800);
+  
 
   // Re-layout en resize (cambia entre modo lateral y modo inferior)
-  window.addEventListener('resize', () => layoutSpheres(current));
+  
 
 })();
