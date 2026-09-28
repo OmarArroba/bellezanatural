@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suéltate el Pelo - Peluquería & Nails</title>
+  <link rel="stylesheet" href="./css/fullscreen.css" />
+  <meta name="description" content="Salón de belleza Suéltate el Pelo. Expertas en cabello, uñas, cejas y pestañas." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ========== RUEDA NAVEGACIÓN ========== -->
+  <nav class="wheel-nav" id="wheelNav" aria-label="Navegación de secciones">
+    <div class="wheel-nav__track">
+      <svg class="wheel-nav__arc wheel-nav__arc--side" viewBox="0 0 120 300" preserveAspectRatio="xMidYMid meet">
+        <path d="M -10,30 Q 110,150 -10,270" fill="none" stroke="var(--gold)" stroke-width="3" opacity="0.25"/>
+      </svg>
+      <svg class="wheel-nav__arc wheel-nav__arc--bottom" viewBox="0 0 300 120" preserveAspectRatio="xMidYMid meet">
+        <path d="M 30,130 Q 150,10 270,130" fill="none" stroke="var(--gold)" stroke-width="3" opacity="0.25"/>
+      </svg>
+      <div class="wheel-nav__spheres" id="wheelSpheres">
+        <button class="sphere active" data-index="0"><span class="sphere__label">Inicio</span></button>
+        <button class="sphere" data-index="1"><span class="sphere__label">Resultados</span></button>
+        <button class="sphere" data-index="2"><span class="sphere__label">Servicios</span></button>
+        <button class="sphere" data-index="3"><span class="sphere__label">Promos</span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== SCROLL CONTAINER ========== -->
+  <main class="scroll-container" id="scrollContainer">
+
+    <!-- ===== SECCIÓN 1 – HERO ===== -->
+    <section class="fs-section fs-section--hero" id="section0">
+      <!-- Slider de fondo -->
+      <div class="hero-slider" id="heroSlider">
+        <div class="hero-slide active">
+          <img src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?w=1600&h=900&fit=crop&auto=format" alt="Salón de belleza Suéltate el Pelo" />
+        </div>
+        <div class="hero-slide">
+          <img src="https://images.unsplash.com/photo-1675034743339-0b0747047727?w=1600&h=900&fit=crop&auto=format" alt="Estilista trabajando en el cabello" />
+        </div>
+        <div class="hero-slide">
+          <img src="https://images.unsplash.com/photo-1560869713-bf165a9cfac1?w=1600&h=900&fit=crop&auto=format" alt="Resultado de coloración rubia" />
+        </div>
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-top-edge"></div>
+
+      <div class="fs-section__content fs-section__content--hero">
+        <div class="hero-content-inner">
+          <p class="font-body hero-subtitle">Expertas en belleza</p>
+          <h1 class="font-display hero-title">Donde tu cabello<br/><em>cobra vida</em></h1>
+          <p class="font-body hero-desc">CABELLO · PESTAÑAS · UÑAS · CEJAS — Peluquería & Nails</p>
+          <div class="hero-buttons">
+            <button class="btn-gold open-modal-btn">Agendar cita</button>
+            <a href="#section2" class="btn-outline-gold">Ver servicios</a>
+          </div>
+        </div>
+      </div>
+
+
+      <button class="arrow-down" aria-label="Siguiente sección">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+    </section>
+
+    <!-- ===== SECCIÓN 2 – TRANSFORMACIONES ===== -->
+    <section class="fs-section fs-section--transform" id="section1">
+      <div class="fs-section__content">
+        <div class="section-header">
+          <p class="font-body section-subtitle">Resultados reales</p>
+          <h2 class="font-display section-title">Transformaciones</h2>
+          <div class="gold-rule"></div>
+        </div>
+
+        <div class="grid-transformaciones">
+          <!-- Slider antes/después -->
+          <div class="comparison-slider-wrapper">
+            <div class="comparison-slider" id="comparisonSlider">
+              <img src="./assets/img/despues.png" alt="Resultado" class="comparison-after" draggable="false" />
+              <div class="comparison-before" id="comparisonBefore">
+                <img src="./assets/img/antes.png" alt="Antes" draggable="false" />
+              </div>
+              <div class="comparison-handle" id="comparisonHandle">
+                <div class="comparison-handle-btn">◀▶</div>
+              </div>
+              <span class="before-after-label left">ANTES</span>
+              <span class="before-after-label right">DESPUÉS</span>
+            </div>
+            <p class="font-body slider-hint">← Desliza para comparar →</p>
+          </div>
+
+          <!-- Texto -->
+          <article class="transformaciones-text">
+            <p class="font-body section-subtitle" style="margin-bottom: 0.75rem;">Servicio destacado</p>
+            <h3 class="font-display">Cirugía Capilar<br/><em>+ Brillo de Oro</em></h3>
+            <p class="font-body transformaciones-desc">
+              Recuperamos la vida y luminosidad de tu cabello con nuestra técnica exclusiva de Cirugía Capilar combinada con un tratamiento de Brillo de Oro. Resultados inmediatos, suavidad extrema y un brillo que habla por sí solo.
+            </p>
+            <div class="transformaciones-divider"></div>
+            <p class="font-body transformaciones-quote">
+              "Mi cabello nunca había lucido así. ¡El cambio fue increíble!"<br/>
+              <span style="color: var(--gold);">— María Espinales</span>
+            </p>
+          </article>
+        </div>
+      </div>
+
+      <button class="arrow-down" aria-label="Siguiente sección">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+    </section>
+
+    <!-- ===== SECCIÓN 3 – SERVICIOS ===== -->
+    <section class="fs-section fs-section--services" id="section2">
+      <div class="fs-section__content">
+        <div class="section-header">
+          <p class="font-body section-subtitle">Lo que ofrecemos</p>
+          <h2 class="font-display section-title">Nuestros Servicios</h2>
+          <div class="gold-rule"></div>
+        </div>
+
+        <div class="grid-3" id="serviciosGrid">
+          <!-- Cabello -->
+          <article class="card-service">
+            <div class="card-img">
+              <img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?w=600&h=400&fit=crop&auto=format" alt="Servicio de tratamiento capilar" />
+              <div class="card-img-overlay"></div>
+            </div>
+            <div class="card-body">
+              <div class="card-header-toggle">
+                <h3 class="font-display card-title">Cabello</h3>
+                <span class="card-toggle-icon">+</span>
+              </div>
+              <div class="card-content-expand">
+                <div class="card-divider"></div>
+                <ul class="card-list font-body">
+                  <li><span class="card-list-left"><span class="card-list-icon">✦</span>Botox Hialurónico</span><span class="card-list-price">$45</span></li>
+                  <li><span class="card-list-left"><span class="card-list-icon">✦</span>Cirugía Capilar</span><span class="card-list-price">$60</span></li>
+                  <li><span class="card-list-left"><span class="card-list-icon">✦</span>Alisado Asiático</span><span class="card-list-price">$55</span></li>
+                  <li><span class="card-list-left"><span class="card-list-icon">✦</span>Piña Plex</span><span class="card-list-price">$35</span></li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- Uñas -->
+          <article class="card-service">
+            <div class="card-img">
+              <img src="https://images.unsplash.com/photo-1777287216954-2b4b22bb6bf2?w=600&h=400&fit=crop&auto=format" alt="Uñas stiletto metálicas y con joyería" />
+              <div class="card-img-overlay"></div>
+            </div>
+            <div class="card-body">
+              <div class="card-header-toggle">
+                <h3 class="font-display card-title">Uñas</h3>
+                <span class="card-toggle-icon">+</span>
+              </div>
+              <div class="card-content-expand">
+                <div class="card-divider"></div>
+                <ul class="card-list font-body">
+                  <li><span class="card-list-left"><span class="card-list-icon">◆</span>Acrílicas Almond</span><span class="card-list-price">$30</span></li>
+                  <li><span class="card-list-left"><span class="card-list-icon">◆</span>Base Rubber</span><span class="card-list-price">$25</span></li>
+                  <li><span class="card-list-left"><span class="card-list-icon">◆</span>Press On</span><span class="card-list-price">$20</span></li>
+                  <li><span class="card-list-left"><span class="card-list-icon">◆</span>Manos y Pies Shellac</span><span class="card-list-price">$40</span></li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- Cejas & Pestañas -->
+          <article class="card-service">
+            <div class="card-img">
+              <img src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?w=600&h=400&fit=crop&auto=format" alt="Tratamiento de cejas y pestañas" />
+              <div class="card-img-overlay"></div>
+            </div>
+            <div class="card-body">
+              <div class="card-header-toggle">
+                <h3 class="font-display card-title">Cejas & Pestañas</h3>
+                <span class="card-toggle-icon">+</span>
+              </div>
+              <div class="card-content-expand">
+                <div class="card-divider"></div>
+                <ul class="card-list font-body">
+                  <li><span class="card-list-left"><span class="card-list-icon">✧</span>Clásicas Tupidas</span><span class="card-list-price">$25</span></li>
+                  <li><span class="card-list-left"><span class="card-list-icon">✧</span>Brow Laminado + Dep</span><span class="card-list-price">$35</span></li>
+                  <li><span class="card-list-left"><span class="card-list-icon">✧</span>Volumen Egipcio</span><span class="card-list-price">$45</span></li>
+                  <li><span class="card-list-left"><span class="card-list-icon">✧</span>Limpieza Facial</span><span class="card-list-price">$30</span></li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <button class="arrow-down" aria-label="Siguiente sección">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+    </section>
+
+    <!-- ===== SECCIÓN 4 – PROMOS ===== -->
+    <section class="fs-section fs-section--promos" id="section3">
+      <div class="fs-section__content">
+        <div class="grid-2">
+          <!-- Texto -->
+          <article>
+            <p class="font-body section-subtitle" style="margin-bottom: 0.75rem;">Temporada especial</p>
+            <h2 class="font-display promos-title">Promociones especiales<br/><em>diseñados para ti</em></h2>
+            <div class="promos-divider"></div>
+            <p class="font-body promos-desc">
+              Este mes tenemos combos exclusivos para que te mimes de pies a cabeza. Aprovecha nuestras promociones y vive la experiencia completa de belleza en un solo lugar.
+            </p>
+
+            <div class="promo-cards">
+              <div class="promo-card">
+                <div>
+                  <p class="font-display promo-card-title">Promocione Estrella</p>
+                  <p class="font-body promo-card-desc">Cirugía Capilar + Manos Shellac</p>
+                </div>
+                <span class="font-body promo-tag">MÁS POPULAR</span>
+              </div>
+              <div class="promo-card">
+                <div>
+                  <p class="font-display promo-card-title">Promocione Reina</p>
+                  <p class="font-body promo-card-desc">Botox + Uñas Acrílicas + Brow Laminado</p>
+                </div>
+                <span class="font-body promo-tag">NUEVO</span>
+              </div>
+              <div class="promo-card">
+                <div>
+                  <p class="font-display promo-card-title">Promocione Esencial</p>
+                  <p class="font-body promo-card-desc">Alisado + Manos y Pies</p>
+                </div>
+              </div>
+            </div>
+
+            <button class="btn-gold open-modal-btn">Solicitar promoción</button>
+          </article>
+
+          <!-- Imagen -->
+          <div class="promos-image-wrapper">
+            <div class="promos-image-border"></div>
+            <img src="https://images.unsplash.com/photo-1777287216958-84144739db83?w=700&h=900&fit=crop&auto=format" alt="Uñas stiletto negras — resultado impecable" class="promos-image" />
+            <div class="promos-badge">
+              <p class="font-body promos-badge-title">Descuento especial</p>
+              <p class="font-display promos-badge-value">Hasta <em>20% OFF</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ========== MODAL DE RESERVA ========== -->
+  <div id="bookingModal" class="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-top-line"></div>
+      <button class="modal-close" id="closeModalBtn" aria-label="Cerrar">✕</button>
+
+      <div class="modal-header">
+        <img src="./assets/img/logo.png" alt="Logo" width="44" height="44" style="object-fit: cover; border-radius: 50%;" />
+        <h3 class="font-display modal-title">Reserva tu espacio</h3>
+        <p class="font-body modal-subtitle">Completa los datos y te contactamos</p>
+      </div>
+
+      <div class="modal-form">
+        <div>
+          <label class="font-body modal-label" for="bookingDate">Fecha <span style="text-transform:none; color:var(--white-muted); font-size:0.6rem;">(Lunes a Sábado)</span></label>
+          <input type="date" id="bookingDate" class="modal-input" />
+        </div>
+        <div>
+          <label class="font-body modal-label" for="bookingTime">Hora <span style="text-transform:none; color:var(--white-muted); font-size:0.6rem;">(10:00 AM - 20:00 PM)</span></label>
+          <input type="time" id="bookingTime" class="modal-input" min="10:00" max="20:00" />
+        </div>
+        <div>
+          <label class="font-body modal-label" for="bookingService">Servicio</label>
+          <select id="bookingService" class="modal-input" style="cursor: pointer;">
+            <option value="">Seleccionar servicio…</option>
+            <option value="Botox Hialurónico">Botox Hialurónico</option>
+            <option value="Cirugía Capilar">Cirugía Capilar</option>
+            <option value="Alisado Asiático">Alisado Asiático</option>
+            <option value="Piña Plex">Piña Plex</option>
+            <option value="Acrílicas Almond">Acrílicas Almond</option>
+            <option value="Base Rubber">Base Rubber</option>
+            <option value="Press On">Press On</option>
+            <option value="Manos y Pies Shellac">Manos y Pies Shellac</option>
+            <option value="Clásicas Tupidas">Clásicas Tupidas</option>
+            <option value="Brow Laminado + Depilación">Brow Laminado + Depilación</option>
+            <option value="Volumen Egipcio">Volumen Egipcio</option>
+            <option value="Limpieza Facial">Limpieza Facial</option>
+          </select>
+        </div>
+        <a href="#" id="modalWaLink" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-full">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12 0C5.374 0 0 5.373 0 12c0 2.117.549 4.107 1.509 5.841L.065 23.494l5.826-1.467A11.948 11.948 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.81c-1.83 0-3.528-.491-4.99-1.347l-.358-.21-3.456.87.92-3.367-.235-.372A9.796 9.796 0 012.19 12C2.19 6.563 6.563 2.19 12 2.19S21.81 6.563 21.81 12 17.437 21.81 12 21.81z"/>
+          </svg>
+          Enviar por WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/fullscreen.js"></script>
+</body>
+</html>
