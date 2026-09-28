@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Fullscreen Scroll + Rueda + Funcionalidades originales
  * ─────────────────────────────────────────────────────────
  * Incluye: navegación fullscreen, rueda animada,
