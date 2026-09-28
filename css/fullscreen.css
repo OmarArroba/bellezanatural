@@ -794,7 +794,7 @@ a { color: inherit; text-decoration: none; }
   border: 1px solid var(--white);
   transition: border-color 0.3s;
 }
-.social-item:hover .social-icon { border-color: var(--gold); }
+
 .legal-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
